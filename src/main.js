@@ -1,8 +1,8 @@
 function test() {
-  t_colors();
 }
 
 
+// 20231130 Tested and ok.
 function t_colors() {
   let j = 0;
   for(let i of Colors) {
@@ -22,6 +22,7 @@ function t_colors() {
     document.body.append(div);
   }
 }
+
 
 // url https://stackoverflow.com/a/35970186/9475509
 function invertColor(hex, bw) {
