@@ -5,5 +5,7 @@ class Agent {
     } else {
       this.phase = Vacuum;
     }
+    
+    this.dirs = Dirs(phase);
   }
 }
