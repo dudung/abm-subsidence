@@ -12,3 +12,12 @@ Granule = Object.freeze(new Phase(5));
 //Electrolye = Object.freeze(new Phase(6));
 //Plasma = Object.freeze(new Phase(7));
 Wall = Object.freeze(new Phase(1));
+
+PhaseName = [
+  "Vacuum",
+  "Wall",
+  "Gas",
+  "Liquid",
+  "Solid",
+  "Granule",
+];

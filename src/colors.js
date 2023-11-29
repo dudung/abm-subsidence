@@ -2,7 +2,7 @@ Colors = [
   "#fff", // Vacuum
   "#000", // Wall
   "#ff8", // Gas
-  "#88f", // Liquid
-  "#444", // Solid
-  "#c88", // Granule
+  "#44f", // Liquid
+  "#433", // Solid
+  "#742", // Granule
 ]
