@@ -1,4 +1,14 @@
 function test() {
+  t_divofspace();
+}
+
+
+// 20231130 Testing.
+function t_divofspace() {
+  let space = createSpace(10, 6);
+  addWallTo(space);
+  let div = divOf(space, 600);
+  document.body.append(div);
 }
 
 

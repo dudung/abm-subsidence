@@ -33,3 +33,32 @@ function textOf(space) {
   }
   return text;
 }
+
+function divOf(space, width) {
+  let div = document.createElement("div");
+  let ROW = space.length;
+  let COL = space[0].length;
+  
+  with(div.style) {
+    width = width + "px";
+    border = "1px solid black";
+  }
+  
+  let size = (width / COL) + "px";
+  console.log(size);
+  for(let i = 0; i < ROW; i++) {
+    for(let j = 0; j < COL; j++) {
+      let cell = document.createElement("div");
+      with(cell.style) {
+        width = "60px";
+        height = "60px";
+        display = "inline-block";
+        border = "1px solid black";
+        background = "#fff";
+      }
+      cell.innerHTML = "";
+      div.append(cell);
+    }
+  }
+  return div;
+}
