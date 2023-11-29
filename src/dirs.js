@@ -1,4 +1,4 @@
-function Dirs(phase) {
+function createDirs(phase) {
   // Vacuum
   let dirs = [
     [0, 0, 0],

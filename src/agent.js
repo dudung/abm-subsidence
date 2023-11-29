@@ -6,6 +6,6 @@ class Agent {
       this.phase = Vacuum;
     }
     
-    this.dirs = Dirs(phase);
+    this.dirs = createDirs(phase);
   }
 }
