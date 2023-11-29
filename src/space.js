@@ -16,7 +16,7 @@ function addWallTo(space) {
   }
 }
 
-function textFrom(space) {
+function textOf(space) {
   let dig = 2;
   let sep = ' ';
   
