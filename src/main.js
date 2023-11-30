@@ -6,9 +6,9 @@ function test() {
 
 // 20231130 Tested and ok.
 function t_divofspace() {
-  let space = createSpace(20, 20);
+  let space = createSpace(50, 20);
   addWallTo(space);
-  let div = divOf(space, 600, "#aaf");
+  let div = divOf2(space, 450, "#aaf");
   document.body.append(div);
 }
 
