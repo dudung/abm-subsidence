@@ -1,42 +1,13 @@
-// url https://stackoverflow.com/a/1720483/9475509
-var style = document.createElement('style');
-style.type = 'text/css';
-style.innerHTML = '.hover { background: #8f8; }';
-document.getElementsByTagName('head')[0].appendChild(style);
-
-// url https://stackoverflow.com/a/69515103/9475509
-/*
-const style = document.createElement("style");
-style.type = 'text/css';
-style.textContent = ".hover { background-color: red; }";
-document.head.appendChild(style);
-*/
-
-// url https://stackoverflow.com/a/524721/9475509
-/*
-var css = '.hover { background: red; }',
-    head = document.head || document.getElementsByTagName('head')[0],
-    style = document.createElement('style');
-
-head.appendChild(style);
-
-style.type = 'text/css';
-if (style.styleSheet){
-  // This is required for IE8 and below.
-  style.styleSheet.cssText = css;
-} else {
-  style.appendChild(document.createTextNode(css));
-}
-*/
-
-// url https://stackoverflow.com/a/26999816/9475509
-function addClass(element, className){
-    element.className += ' ' + className;   
-}
-
-function removeClass(element, className) {
-    element.className = element.className.replace(
-        new RegExp('( |^)' + className + '( |$)', 'g'), ' ').trim();
+// url https://stackoverflow.com/a/13070198/9475509
+function rgb2hex(color) {
+  let a = color.split("(")[1].split(")")[0];
+  a = a.split(",");
+  let b = a.map(function(x) {            //For each array element
+    x = parseInt(x).toString(16);      //Convert to a base16 string
+    return (x.length==1) ? "0"+x : x;  //Add zero if we get only one character
+  });
+  b = "#"+b.join("");
+  return b;
 }
 
 

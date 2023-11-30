@@ -6,9 +6,13 @@ function test() {
 
 // 20231130 Tested and ok.
 function t_divofspace() {
-  let space = createSpace(11, 20);
+  let space = createSpace(20, 10);
   addWallTo(space);
-  let div = divOf(space, 300, "#aaf");
+  space[1][1] = Gas.type;
+  space[2][2] = Liquid.type;
+  space[3][3] = Solid.type;
+  space[4][4] = Granule.type;
+  let div = divOf(space, 500, "#aaf");
   document.body.append(div);
 }
 

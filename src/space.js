@@ -65,13 +65,14 @@ function divOf(space, width, color) {
   return div;
 }
 
-
+// 20231130 tested and ok
 function enterDiv(event) {
   let div = event.target;
-  addClass(div, "hover");
+  div.style.prevBackground = div.style.background;
+  div.style.background = invertColor(rgb2hex(div.style.background));
 }
 
 function leaveDiv(event) {
   let div = event.target;
-  removeClass(div, "hover");
+  div.style.background = div.style.prevBackground;
 }
