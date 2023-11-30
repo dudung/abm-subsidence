@@ -61,6 +61,7 @@ function divOf(space, width, color) {
         cell.style.borderWidth = "0 1px 1px 0";
       }
       cell.style.margin = "-2px 0px";
+      cell.style.background = Colors[space[i][j]];
       div.append(cell);
       
     }

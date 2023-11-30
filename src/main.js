@@ -1,12 +1,12 @@
 function test() {
-  //t_divofspace();
+  t_divofspace();
   //t_colors();
 }
 
 
 // 20231130 Tested and ok.
 function t_divofspace() {
-  let space = createSpace(10, 6);
+  let space = createSpace(20, 20);
   addWallTo(space);
   let div = divOf(space, 600, "#aaf");
   document.body.append(div);
