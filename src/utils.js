@@ -1,11 +1,53 @@
+// url https://stackoverflow.com/a/1720483/9475509
+var style = document.createElement('style');
+style.type = 'text/css';
+style.innerHTML = '.hover { background: #8f8; }';
+document.getElementsByTagName('head')[0].appendChild(style);
+
+// url https://stackoverflow.com/a/69515103/9475509
+/*
+const style = document.createElement("style");
+style.type = 'text/css';
+style.textContent = ".hover { background-color: red; }";
+document.head.appendChild(style);
+*/
+
+// url https://stackoverflow.com/a/524721/9475509
+/*
+var css = '.hover { background: red; }',
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+
+head.appendChild(style);
+
+style.type = 'text/css';
+if (style.styleSheet){
+  // This is required for IE8 and below.
+  style.styleSheet.cssText = css;
+} else {
+  style.appendChild(document.createTextNode(css));
+}
+*/
+
+// url https://stackoverflow.com/a/26999816/9475509
+function addClass(element, className){
+    element.className += ' ' + className;   
+}
+
+function removeClass(element, className) {
+    element.className = element.className.replace(
+        new RegExp('( |^)' + className + '( |$)', 'g'), ' ').trim();
+}
+
+
 // url https://stackoverflow.com/a/35970186/9475509
+function padZero(str, len) {
+  len = len || 2;
+  var zeros = new Array(len).join('0');
+  return (zeros + str).slice(-len);
+}
+
 function invertColor(hex, bw) {
-  function padZero(str, len) {
-    len = len || 2;
-    var zeros = new Array(len).join('0');
-    return (zeros + str).slice(-len);
-  }
-  
   if (hex.indexOf('#') === 0) {
     hex = hex.slice(1);
   }

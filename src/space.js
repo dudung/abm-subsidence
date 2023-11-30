@@ -49,7 +49,6 @@ function divOf(space, width, color) {
       let cell = document.createElement("div");
       cell.style.width = size + "px";
       cell.style.height = size + "px";
-      //cell.style.display = "inline-block";
       cell.style.borderStyle = "solid";
       cell.style.borderColor = color;
       cell.style.borderWidth = "1px 1px 1px 1px";
@@ -58,10 +57,21 @@ function divOf(space, width, color) {
       cell.style.position = "absolute";
       cell.style.left = (j * size) + "px";
       cell.style.top = (i * size) + "px";
+      cell.addEventListener("mouseenter", enterDiv);
+      cell.addEventListener("mouseleave", leaveDiv);
       div.append(cell);
-      
     }
   }
   return div;
 }
 
+
+function enterDiv(event) {
+  let div = event.target;
+  addClass(div, "hover");
+}
+
+function leaveDiv(event) {
+  let div = event.target;
+  removeClass(div, "hover");
+}
